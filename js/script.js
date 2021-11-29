@@ -4,6 +4,7 @@ const profile = document.querySelector('#profile')
 const userName = document.querySelector('#userName')
 const resultado = document.querySelector('.resultado')
 const btnSearch = document.querySelector('#btnSearch')
+const btnDelete = document.querySelector('.btn-delete')
 
 btnSearch.addEventListener('click', e => {
 	e.preventDefault()
@@ -24,12 +25,14 @@ btnSearch.addEventListener('click', e => {
 			if (name === undefined) {
 				resultado.innerHTML = `
 				<div class="card undefined">
+					<span class="btn-delete">X</span>
 					<p class="undefined">${userName.value} não encontrado</p>
 				</div>`
 			} else {
 				const novaLista = document.createElement('resultado')
 				novaLista.innerHTML = `
 				<a href="https://github.com/${user}" target="_blanck" class="card">
+						<span class="btn-delete">X</span>
             <img src="${avatar_url}" alt="${name}" class="img-avatar">
             <div class="card-body">
 						<div class="dados-principal">
@@ -46,3 +49,12 @@ btnSearch.addEventListener('click', e => {
 			}
 		})
 })
+
+//btnDelete
+if (resultado) {
+	resultado.addEventListener('click', e => {
+		if (e.target.classList.contains('btn-delete')) {
+			e.target.parentElement.remove()
+		}
+	})
+}

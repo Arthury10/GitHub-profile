@@ -40,6 +40,18 @@
 	background: var(--bg-hover);
 }
 
+.btn-delete {
+	position: absolute;
+	right: -20px;
+	top: -10px;
+	background: var(--card-title);
+	padding: 5px 15px;
+	cursor: pointer;
+	color: white;
+	font-weight: bold;
+	border-radius: 50%;
+}
+
 #userName {
 	width: 70%;
 	font-size: 1.5rem;
@@ -68,6 +80,7 @@
 	justify-content: space-around;
 	gap: 40px;
 	text-decoration: none;
+	position: relative;
 }
 
 .card:hover {
