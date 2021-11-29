@@ -12,7 +12,6 @@ btnSearch.addEventListener('click', e => {
 	fetch(`https://api.github.com/users/${user}`)
 		.then(r => r.json())
 		.then(body => {
-			console.log(resultado)
 			const {
 				name,
 				avatar_url,
