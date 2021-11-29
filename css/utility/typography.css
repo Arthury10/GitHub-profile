@@ -1,0 +1,34 @@
+.h1 {
+	font-size: 4rem;
+	line-height: 1.2;
+	margin-bottom: 0.5rem;
+	text-align: center;
+	color: #8f9599;
+}
+
+.h1 span {
+	font-size: 2rem;
+	font-weight: 300;
+}
+
+.p {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	text-align: left;
+}
+
+.card-title {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	text-align: left;
+	color: #6c63fe;
+}
+
+.card-text {
+	font-size: 0.875rem;
+	line-height: 1.5;
+	text-align: left;
+	color: #8f9599;
+}
