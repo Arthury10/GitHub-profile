@@ -22,17 +22,21 @@ btnSearch.addEventListener('click', e => {
 				following
 			} = body
 
-			if (name === undefined) {
+			if (name === undefined || name === null) {
 				resultado.innerHTML = `
+				<span class="btn-delete">X</span>
 				<div class="card undefined">
-					<span class="btn-delete">X</span>
 					<p class="undefined">${userName.value} não encontrado</p>
 				</div>`
+
+				setTimeout(() => {
+					resultado.innerHTML = ''
+				}, 1000)
 			} else {
 				const novaLista = document.createElement('resultado')
 				novaLista.innerHTML = `
+			<span class="btn-delete">X</span>
 				<a href="https://github.com/${user}" target="_blanck" class="card">
-						<span class="btn-delete">X</span>
             <img src="${avatar_url}" alt="${name}" class="img-avatar">
             <div class="card-body">
 						<div class="dados-principal">
