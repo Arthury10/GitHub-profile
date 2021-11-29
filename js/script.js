@@ -20,8 +20,10 @@ btnSearch.addEventListener('click', e => {
 				followers,
 				following
 			} = body
-			resultado.innerHTML = `
-        <a href="https://github.com/${user}" target="_blanck" class="card">
+
+			const novaLista = document.createElement('resultado')
+			novaLista.innerHTML = `
+				<a href="https://github.com/${user}" target="_blanck" class="card">
             <img src="${avatar_url}" alt="${name}" class="img-avatar">
             <div class="card-body">
 						<div class="dados-principal">
@@ -33,6 +35,7 @@ btnSearch.addEventListener('click', e => {
                 <p class="card-text">Seguindo ${following}</p>
             </div>
         </a>
-      `
+				`
+			resultado.appendChild(novaLista)
 		})
 })

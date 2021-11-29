@@ -26,7 +26,7 @@
 
 .procurar-search {
 	width: 30%;
-	background: #6c63fe;
+	background: var(--card-title);
 	padding: 15px 20px;
 	cursor: pointer;
 	border-radius: 0px 4px 4px 0px;
@@ -37,7 +37,7 @@
 }
 
 .procurar-search:hover {
-	background: #5049c7;
+	background: var(--bg-hover);
 }
 
 #userName {
@@ -47,7 +47,7 @@
 	border: none;
 	border-radius: 4px 0px 0px 4px;
 	padding: 10px 10px;
-	color: #8f9599;
+	color: var(--text);
 }
 
 #userName:focus {
@@ -56,7 +56,7 @@
 
 /*card*/
 .card {
-	border: 1px solid #ccc;
+	border: 1px solid var(--text);
 	margin-top: 1rem;
 	transition: 0.3s;
 	width: 100%;
@@ -71,7 +71,7 @@
 }
 
 .card:hover {
-	border: 1px solid #6c63fe;
+	border: 1px solid var(--card-title);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -107,5 +107,19 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.section-search {
+		padding: 10px 10px;
+	}
+
+	.search-profile img {
+		max-width: 280px;
+	}
+
+	.container-profile {
+		width: 90%;
 	}
 }
